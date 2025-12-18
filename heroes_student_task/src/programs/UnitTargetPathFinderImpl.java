@@ -22,7 +22,6 @@ public class UnitTargetPathFinderImpl implements UnitTargetPathFinder {
         int targetX = targetUnit.getxCoordinate();
         int targetY = targetUnit.getyCoordinate();
 
-        // Используем java.util.PriorityQueue и другие классы с полными именами
         java.util.PriorityQueue<Node> open = new java.util.PriorityQueue<>(java.util.Comparator.comparingInt(n -> n.f));
         java.util.Map<String, Node> allNodes = new java.util.HashMap<>();
         Node start = new Node(startX, startY, null, 0, heuristic(startX, startY, targetX, targetY));
